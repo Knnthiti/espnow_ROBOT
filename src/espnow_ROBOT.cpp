@@ -17,6 +17,11 @@ void OnDataSent(const uint8_t* mac_addr, esp_now_send_status_t status) {
 #ifdef ESPNOW
   Serial.print(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success " : "Delivery Fail ");
 #endif
+  if(status == ESP_NOW_SEND_SUCCESS){
+  status_ESPNOW_Sent = 1;
+ }else{
+  status_ESPNOW_Sent = 0;
+ }
 }
 
 void ESPNOW_ROBOT ::Setup_send_ESPNOW() {
