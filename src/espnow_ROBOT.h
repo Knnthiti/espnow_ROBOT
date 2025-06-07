@@ -1,18 +1,26 @@
 #ifndef espnow_ROBOT
 #define espnow_ROBOT
 
-#define ESPNOW
+// #define ESPNOW_Debug
 
 #include <Arduino.h>
 #include <esp_now.h>
 #include <WiFi.h>
+#include <esp_wifi.h>
+#include <stdint.h>
 
+extern uint8_t status_ESPNOW_Sent;
 
 class ESPNOW_ROBOT {
 public:
   esp_now_peer_info_t peerInfo;
   uint8_t broadcastAddress[6];
 
+  bool Initializing_Send = 0;
+  bool Add_peer = 0;
+  bool Sending = 0;
+  bool Initializing_Receive = 0;
+  
   ESPNOW_ROBOT(){
 
   }
