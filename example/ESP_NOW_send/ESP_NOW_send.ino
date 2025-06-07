@@ -1,7 +1,7 @@
 #include <espnow_ROBOT.h>
 
 uint8_t broadAddress[6] = { 0xF4, 0x65, 0x0B, 0x59, 0x3B, 0xC8 };
-// F4:65:0B:59:3B:C8
+
 ESPNOW_ROBOT joy(broadAddress);
 
 typedef struct __attribute__((packed)) {
