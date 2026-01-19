@@ -1,11 +1,10 @@
-#include <espnow_ROBOT.h>
-
-ESPNOW_ROBOT joy;
-
 void setup() {
-  joy.MAC_Address_ESPNOW();
+  Serial.begin(115200);
+  WiFi.mode(WIFI_MODE_STA);
 }
 
 void loop() {
-
+  Serial.print("MAC Address: ");
+  Serial.println(WiFi.macAddress());
+  delay(1000);
 }

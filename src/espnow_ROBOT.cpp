@@ -1,18 +1,5 @@
 #include"espnow_ROBOT.h"
 
-
-void ESPNOW_ROBOT ::MAC_Address_ESPNOW(){
-  // Setup Serial Monitor
-  Serial.begin(115200);
- 
-  // Put ESP32 into Station mode
-  WiFi.mode(WIFI_MODE_STA);
- 
-  // Print MAC Address to Serial monitor
-  Serial.print("MAC Address: ");
-  Serial.println(WiFi.macAddress());
-}
-
 uint8_t status_ESPNOW_Sent;
 
 void OnDataSent(const uint8_t* mac_addr, esp_now_send_status_t status) {

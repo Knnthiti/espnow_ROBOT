@@ -34,7 +34,6 @@ public:
     broadcastAddress[5] = broadAddress[5];
   }
 
-  void MAC_Address_ESPNOW();
   void Setup_send_ESPNOW();
   void Sendvalue_ESPNOW(uint8_t* data, size_t len);
   
